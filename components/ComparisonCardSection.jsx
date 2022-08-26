@@ -10,7 +10,7 @@ const ComparisonCardSection = () => {
       <h2 className="text-gray font-poppins my-6 text-center text-sm">
         That&apos;s not the case with other money transfer operators
       </h2>
-      <ComparisonCard />;
+      <ComparisonCard />
     </section>
   );
 };
