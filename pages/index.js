@@ -1,6 +1,6 @@
 import React from 'react'
 import ComparisonCardSection from '../components/ComparisonCardSection';
-import Hero from '../components/hero'
+import Hero from '../components/Hero'
 import LastSection from '../components/LastSection';
 import LongTextSection from '../components/LongTextSection';
 import NoChargesSection from '../components/NoChargesSection';

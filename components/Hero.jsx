@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card";
-import Intro from "./common/Intro";
+import Intro from "./Common/Intro";
 
 const Hero = () => {
   return (
