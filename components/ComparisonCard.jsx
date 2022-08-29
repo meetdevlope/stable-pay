@@ -28,15 +28,25 @@ const ComparisonCard = ({ companyName, amount, charges }) => {
       {cardData.map((data, idx) => (
         <div
           key={idx}
-          className={`text-center flex flex-col justify-between py-2 text-white border rounded-xl w-52 h-28 ${
+          className={`flex justify-between items-center p-4 text-white border rounded-xl w-full max-w-xs ${
             data.companyName === "StablePay"
-              ? "bg-pri-dark border-pri-light"
-              : "bg-pri-light border-pri-dark"
+              ? "bg-pri-dark border-pri-light scale-[1.2] shadow-2xl mx-4 md:mx-0"
+              : "bg-pri-light border-0 opacity-50"
           }`}
         >
-          <h3 className="font-semibold text-lg">{data.companyName}</h3>
-          <h5 className="font-medium my-2">$ {data.amount}</h5>
-          <p className="text-xs">{data.charges}</p>
+          <div>
+            <h3 className="font-semibold text-xl mb-2">{data.companyName}</h3>
+            <p className="text-xs">{data.charges}</p>
+          </div>
+          <h5
+            className={`font-medium my-2 ${
+              data.companyName === "StablePay"
+                ? "bg-pri-light rounded-full px-4 py-2"
+                : null
+            }`}
+          >
+            $ {data.amount}
+          </h5>
         </div>
       ))}
     </div>

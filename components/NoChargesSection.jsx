@@ -6,8 +6,8 @@ import TypeComponent from "./TypeComponent";
 const NoChargesSection = () => {
   return (
     <section className="flex flex-col text-pri gap-4 max-w-7xl mx-auto my-10 items-center text-center lg:text-left">
-      <h2 className="text-2xl font-dm_serif font-bold"> StablePay</h2>
-      <div className="max-w-lg flex gap-2 text-2xl font-dm_serif font-bold">
+      <h2 className="text-3xl font-dm_serif font-bold"> StablePay</h2>
+      <div className="max-w-lg flex gap-2 text-3xl font-dm_serif font-bold">
         <h5>$0</h5>
         <TypeComponent />
       </div>
