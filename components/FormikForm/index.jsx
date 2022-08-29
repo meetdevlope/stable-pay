@@ -6,7 +6,7 @@ import cn from "classnames";
 const FormikForm = ({ fields, action, formClass, ...props }) => {
   return (
     <Formik {...props}>
-      {({ submitForm, handleChange }) => {
+      {({ submitForm, handleChange, values }) => {
         return (
           <Form className={cn("flex", { [formClass]: !!formClass })}>
             {fields.map((x, id) => (
@@ -17,6 +17,7 @@ const FormikForm = ({ fields, action, formClass, ...props }) => {
                     submitForm();
                   }}
                   key={id}
+                  value={values}
                   {...x}
                 />
                 <ErrorMessage name={x.name} component={<TextError />} />

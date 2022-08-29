@@ -22,11 +22,12 @@ const Wallet = () => {
       fields={[
         {
           label: "Your Wallet",
+          placeholder: "$ 100",
           type: "number",
           name: "inputAmount",
           component: FormInput,
           inputClass:
-            "py-2 px-4 text-2xl w-full font-bold rounded-l-md  placeholder:text-dark_gray placeholder:font-bold",
+            "py-2 px-4 text-2xl font-bold rounded-l-md  placeholder:text-dark_gray placeholder:font-bold",
         },
         {
           name: "selectCurrency",
@@ -74,7 +75,7 @@ const Wallet = () => {
           ],
           component: FormDropdown,
           inputClass:
-            "py-4 px-4 w-full font-bold rounded-r-md placeholder:text-dark_gray placeholder:font-bold",
+            "py-4 px-4 font-bold rounded-r-md placeholder:text-dark_gray",
         },
       ]}
       // action={() => (

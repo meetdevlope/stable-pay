@@ -29,7 +29,7 @@ const FormDropdown = ({
           {...field}
           {...props}
           className={cn(
-            "border bg-[transparent] w-full mt-2 p-1 focus:outline-none placeholder:text-pri",
+            "border border-gray bg-gray w-full mt-2 p-1 focus:outline-none placeholder:text-pri",
             {
               [inputClass]: !!inputClass,
             }
