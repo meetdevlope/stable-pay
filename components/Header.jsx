@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
+
 import ButtonComponent from "./ButtonComponent";
 
 const Header = () => {
@@ -21,9 +22,9 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { label: "Rates & Fees", link: "#" },
-    { label: "About", link: "#" },
-    { label: "Contact Us", link: "#" },
+    { label: "Rates & Fees", link: "#comparison-section" },
+    { label: "About", link: "#about-us" },
+    { label: "Contact Us", link: "" },
   ];
 
   const router = useRouter();
@@ -50,11 +51,7 @@ const Header = () => {
         }`}
       >
         {navLinks.map((navLink, i) => (
-          <a
-            className="hover:text-pri-dark transition-all cursor-pointer"
-            onClick={() => router.push(navLink.link)}
-            key={i}
-          >
+          <a href={navLink.link} key={i}>
             {navLink.label}
           </a>
         ))}

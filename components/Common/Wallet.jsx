@@ -75,7 +75,7 @@ const Wallet = () => {
           ],
           component: FormDropdown,
           inputClass:
-            "py-3 px-4 font-bold rounded-r-md placeholder:text-dark_gray",
+            "py-3 px-4 font-bold rounded-r-md placeholder:text-dark_gray h-[52px]",
         },
       ]}
       // action={() => (

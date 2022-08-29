@@ -2,7 +2,7 @@ import React from "react";
 
 const LongTextSection = () => {
   return (
-    <section className="bg-pri">
+    <section className="bg-pri" id="about-us">
       <div className="max-w-7xl mx-auto text-center lg:text-left py-10 flex flex-col gap-6 text-white">
         <p>
           We are building a future of global remittance - Fair, efficient and

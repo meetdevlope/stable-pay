@@ -3,7 +3,7 @@ import ComparisonCard from "./ComparisonCard";
 
 const ComparisonCardSection = () => {
   return (
-    <section className="bg-pri py-20">
+    <section id="comparison-section" className="bg-pri py-20">
       <div className="max-w-5xl m-auto flex flex-col items-center">
         <div className="mb-12">
           <h1 className="text-white text-3xl font-dm_serif text-center font-bold">
