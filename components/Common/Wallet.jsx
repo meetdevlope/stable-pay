@@ -1,55 +1,85 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
+import ButtonComponent from "../ButtonComponent";
 import FormikForm from "../FormikForm";
+import FormDropdown from "../FormikForm/formDropdown";
 import FormInput from "../FormikForm/formInput";
 import FormInputDropdown from "../FormikForm/formInputDropdown";
 
 const Wallet = () => {
+  const [currencies, setcurrencies] = useState({});
   const submitAction = (values) => {
     console.log(values);
   };
   return (
     <FormikForm
-      formClass="flex-col gap-4"
+      formClass="items-end justify-center"
       initialValues={{
         inputAmount: "",
-        outputAmount: "$ 100",
+        selectCurrency: "",
       }}
       onSubmit={submitAction}
       fields={[
         {
-          label: "Your wallet",
+          label: "Your Wallet",
           type: "number",
           name: "inputAmount",
-          placeholder: "₹ 7000",
+          component: FormInput,
+          inputClass:
+            "py-2 px-4 text-2xl w-full font-bold rounded-l-md  placeholder:text-dark_gray placeholder:font-bold",
+        },
+        {
+          name: "selectCurrency",
           options: [
             {
-              text: "$ USD",
+              text: "USD",
               value: "usd",
             },
             {
-              text: "₹ INR",
-              value: "inr",
+              text: "CAD",
+              value: "cad",
             },
             {
-              text: "€ Euro",
-              value: "euro",
+              text: "AUD",
+              value: "aud",
+            },
+            {
+              text: "GBP",
+              value: "gbp",
+            },
+            {
+              text: "EUR",
+              value: "eur",
+            },
+            {
+              text: "AED",
+              value: "aed",
+            },
+            {
+              text: "SAR",
+              value: "sar",
+            },
+            {
+              text: "NGN",
+              value: "ngn",
+            },
+            {
+              text: "NZD",
+              value: "nzd",
+            },
+            {
+              text: "SGD",
+              value: "sgd",
             },
           ],
-          component: FormInputDropdown,
-          inputDropdownClass: "w-1/4 rounded-r-md",
+          component: FormDropdown,
           inputClass:
-            "py-2 px-4 text-2xl w-3/4 font-bold rounded-l-md placeholder:text-dark_gray placeholder:font-bold",
-        },
-        {
-          label: "Maximum Deposit Amount",
-          type: "text",
-          name: "outputAmount",
-          component: FormInput,
-          inputClass:
-            "py-2 px-4 text-2xl w-full font-bold rounded-l-md placeholder:text-dark_gray placeholder:font-bold",
+            "py-4 px-4 w-full font-bold rounded-r-md placeholder:text-dark_gray placeholder:font-bold",
         },
       ]}
+      // action={() => (
+      //   <ButtonComponent type="submit" buttonText="Convert" appearance="pri" />
+      // )}
     />
   );
 };
