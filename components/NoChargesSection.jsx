@@ -8,8 +8,8 @@ const NoChargesSection = () => {
     <section className="py-10">
       <div className="container flex flex-row-reverse justify-center flex-wrap gap-20 max-w-7xl mx-auto">
         <div className="flex-1 flex flex-col justify-center tab:items-start items-center text-center tab:text-left text-[#e1e1ff]">
-          <div className="max-w-lg flex items-start gap-2 text-2xl tab:text-4xl font-dm_serif font-bold text-white">
-            <h5>StablePay fees $0</h5>
+          <div className="max-w-lg tab:flex flex-wrap tab:items-start text-center gap-2 text-2xl tab:text-4xl font-dm_serif font-bold text-white">
+            <h5 className="text-center">StablePay fees $0</h5>
             <TypeComponent />
           </div>
           <p className="text-xl my-6 text-[#e8e8ff]">

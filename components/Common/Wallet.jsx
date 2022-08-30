@@ -213,7 +213,7 @@ const Wallet = () => {
         <div>
           <div className="flex mb-4">
             <input
-              className="border border-gray px-4 py-2 rounded-l-md flex-1"
+              className="border border-gray px-4 py-2 rounded-l-md w-full"
               type={"number"}
               placeholder="Currency"
               value={state?.amount}
