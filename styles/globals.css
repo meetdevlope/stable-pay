@@ -6,7 +6,7 @@
 
 @layer components {
   body {
-    @apply m-0 p-0 font-poppins scroll-smooth;
+    @apply m-0 p-0 font-poppins;
   }
   section {
     @apply px-6 tab:px-8;

@@ -9,12 +9,12 @@ const Card = () => {
       <div className="p-6 pt-4 rounded-2xl w-full lg:w-[90%] bg-white mx-auto flex flex-col gap-12">
         <span className="w-[20%] h-1 self-center bg-[#ebebeb] rounded-full"></span>
         <Wallet />
-        <div className="w-full flex items-center">
+        {/* <div className="w-full flex items-center">
           <Labels label="50,000 INR" tag="You could save" />
           <span className="h-10 w-1 bg-dark_gray rounded-full"></span>
           <Labels label="By May 20nd" tag="Should arrive" />
-        </div>
-        <div className="w-full flex lg:flex-row flex-col items-center gap-4">
+        </div> */}
+        {/* <div className="w-full flex lg:flex-row flex-col items-center gap-4">
           <ButtonComponent
             buttonText="Add to wallet"
             appearance="pri"
@@ -25,7 +25,7 @@ const Card = () => {
             appearance="pri-out"
             buttonClass={"flex-1 py-4"}
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

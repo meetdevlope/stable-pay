@@ -32,7 +32,9 @@ const Header = () => {
   return (
     <header
       className={`py-2 pl-8 tab:py-6 bg-pri tab:px-12 z-[1] shadow-md ${
-        stiHeader ? "sticky top-0 bg-white transition-all duration-200" : null
+        stiHeader
+          ? "sticky top-0 bg-white transition-all duration-300"
+          : "transition-all duration-300"
       } flex justify-between items-center`}
     >
       <div className="max-w-7xl flex justify-between w-full mx-auto">

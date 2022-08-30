@@ -209,7 +209,7 @@ const Wallet = () => {
       <p>error :( </p>
     ) : (
       <div>
-        <p className="mb-2">Your Wallet</p>
+        <p className="mb-2">You Send</p>
         <div>
           <div className="flex mb-4">
             <input
@@ -224,7 +224,7 @@ const Wallet = () => {
               id="cur"
               value={state?.cur}
               onChange={onDrop}
-              className="bg-gray px-4 py-2 h-[42px] rounded-r-md"
+              className="bg-pri text-white px-4 py-2 h-[42px] rounded-r-md"
             >
               {options.map((e, i) => (
                 <option value={e.value} key={i}>
@@ -233,11 +233,12 @@ const Wallet = () => {
               ))}
             </select>
           </div>
-          <p className="mb-2">Maximum Deposit Amount</p>
+          <p className="mb-2">Recepient Gets</p>
           <p className="border border-gray px-4 py-2 rounded-md">
-            {state?.final}
+            {state?.final.toFixed(2)}
           </p>
         </div>
+        <img src="/images/fincrypt-visual.png" alt="charts" className="mt-10" />
       </div>
     )
   );
