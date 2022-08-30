@@ -2,8 +2,10 @@ import React from "react";
 
 const LongTextSection = () => {
   return (
-    <section className="bg-pri" id="about-us">
-      <div className="max-w-7xl mx-auto text-center lg:text-left py-10 flex flex-col gap-6 text-white">
+    <section id="about-us">
+      <div className="max-w-7xl mx-auto text-center lg:text-left py-20 flex flex-col gap-6 text-white">
+        <h1 className="text-4xl mb-6 font-dm_serif">About Us</h1>
+
         <p>
           We are building a future of global remittance - Fair, efficient and
           secure way of transferring money from one region to another. We are

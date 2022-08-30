@@ -5,6 +5,7 @@ export const getConvertedData = async () => {
         const data = await axios.get('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/inr.json');
         return data.data['inr'];
     } catch (error) {
+        console.log(error);
         return {};
     }
 }

@@ -29,7 +29,7 @@ const EmailComponent = ({ buttonAppearence }) => {
             appearance={buttonAppearence}
             buttonText="Get Early Access"
             type="submit"
-            buttonClass="self-center text-sm"
+            buttonClass="self-center text-sm bg-pri-dark"
           />
         )}
       />

@@ -4,7 +4,7 @@ import Typical from "react-typical";
 
 const TypeComponent = () => {
   return (
-    <div className="text-pri-light">
+    <div className="text-white">
       <Typical
         steps={[
           "Forex",

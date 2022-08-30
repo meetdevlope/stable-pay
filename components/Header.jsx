@@ -23,7 +23,7 @@ const Header = () => {
 
   const navLinks = [
     { label: "Rates & Fees", link: "#comparison-section" },
-    { label: "About", link: "#about-us" },
+    { label: "About Us", link: "#about-us" },
     { label: "Contact Us", link: "" },
   ];
 
@@ -31,30 +31,31 @@ const Header = () => {
 
   return (
     <header
-      className={`py-2 pl-8 tab:py-6 bg-pri tab:px-12 z-[1] ${
+      className={`py-2 pl-8 tab:py-6 bg-pri tab:px-12 z-[1] shadow-md ${
         stiHeader ? "sticky top-0 bg-white transition-all duration-200" : null
       } flex justify-between items-center`}
     >
-      <div className="h-8 w-24 relative">
-        <h1
-          className={`font-dm_serif font-bold text-3xl ${
-            stiHeader ? "text-pri" : "text-white"
-          } `}
+      <div className="max-w-7xl flex justify-between w-full mx-auto">
+        <div className="h-8 w-24 relative">
+          <h1
+            className={`font-dm_serif font-bold text-3xl ${
+              stiHeader ? "text-pri" : "text-white"
+            } `}
+          >
+            Stablepay
+          </h1>
+        </div>
+        <div
+          className={`tab:flex tab:justify-center tab:items-center tab:font-semibold tab:gap-8 hidden ${
+            stiHeader ? "tab:text-pri" : "tab:text-white"
+          }`}
         >
-          Stablepay
-        </h1>
-      </div>
-
-      <div
-        className={`tab:flex tab:justify-center tab:items-center tab:font-semibold tab:gap-8 hidden ${
-          stiHeader ? "tab:text-pri" : "tab:text-white"
-        }`}
-      >
-        {navLinks.map((navLink, i) => (
-          <a href={navLink.link} key={i}>
-            {navLink.label}
-          </a>
-        ))}
+          {navLinks.map((navLink, i) => (
+            <a href={navLink.link} key={i}>
+              {navLink.label}
+            </a>
+          ))}
+        </div>
       </div>
 
       <svg
@@ -87,7 +88,7 @@ const Header = () => {
       >
         {navLinks.map((navLink, i) => (
           <a
-            className="hover:text-pri-dark transition-all flex justify-between w-full"
+            className="hover:text-pri-dark transition-all flex justify-between w-full text-pri-dark"
             key={i}
             onClick={() => {
               router.push(navLink.link);

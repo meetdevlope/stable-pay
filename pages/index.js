@@ -14,7 +14,7 @@ const index = () => {
   return (
     <div>
       <Hero />
-      <VideoCard />
+      {/* <VideoCard /> */}
       <ComparisonCardSection />
       <NoChargesSection />
       <LongTextSection />
