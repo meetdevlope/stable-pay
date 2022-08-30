@@ -25,14 +25,12 @@ const reducer = (state = inittialValues, action) => {
     case "GET_CUR":
       return { ...state, curArr: action.curArr, loading: false, error: false };
     case "CHANGE_DROP":
-      // console.log("dd", state.curArr);
       return {
         ...state,
         cur: action.cur,
         final: state.amount / state.curArr[action.cur],
       };
     case "CHANGE_AMOUNT":
-      console.log("am", action.amount === NaN);
       return {
         ...state,
         amount: action.amount,
@@ -55,7 +53,6 @@ const Wallet = () => {
   useEffect(() => {
     getCurencies();
   }, []);
-  console.log(state);
 
   // const onChange = () => {};
 
@@ -133,9 +130,7 @@ const Wallet = () => {
     // setcurrencies(data);
   };
 
-  const submitAction = (values) => {
-    console.log(values);
-  };
+  const submitAction = (values) => {};
   return (
     // <FormikForm
     //   formClass="items-end justify-center"
