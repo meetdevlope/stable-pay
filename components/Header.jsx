@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 
@@ -38,15 +39,15 @@ const Header = () => {
       } flex justify-between items-center`}
     >
       <div className="max-w-7xl flex justify-between w-full mx-auto">
-        <div className="h-8 w-24 relative">
+        <Link href={"/"}>
           <h1
-            className={`font-dm_serif font-bold text-3xl ${
+            className={`font-dm_serif font-bold text-3xl cursor-pointer ${
               stiHeader ? "text-pri" : "text-white"
             } `}
           >
-            Stablepay
+            Stable Pay
           </h1>
-        </div>
+        </Link>
         <div
           className={`tab:flex tab:justify-center tab:items-center tab:font-semibold tab:gap-8 hidden ${
             stiHeader ? "tab:text-pri" : "tab:text-white"

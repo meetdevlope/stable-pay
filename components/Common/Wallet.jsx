@@ -238,7 +238,7 @@ const Wallet = () => {
             {state?.final.toFixed(2)}
           </p>
         </div>
-        <img src="/images/fincrypt-visual.png" alt="charts" className="mt-10" />
+        {/* <img src="/images/fincrypt-visual.png" alt="charts" className="mt-10" /> */}
       </div>
     )
   );

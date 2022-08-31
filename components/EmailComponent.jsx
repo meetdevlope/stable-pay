@@ -6,6 +6,11 @@ import FormInput from "./FormikForm/formInput";
 const EmailComponent = ({ buttonAppearence }) => {
   const submitAction = (values) => {
     console.log(values);
+
+    fetch("/api/mail", {
+      method: "post",
+      body: JSON.stringify(values),
+    });
   };
   return (
     <div>
