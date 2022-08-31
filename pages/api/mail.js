@@ -3,8 +3,10 @@ import { data } from 'autoprefixer';
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 const mail = require('@sendgrid/mail');
 
+const key = process.env.API_KEY 
 
-mail.setApiKey('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');
+
+mail.setApiKey(key);
 const HTMLMARCUP = `
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +17,7 @@ const HTMLMARCUP = `
     <title>Document</title>
 </head>
 <body>
-    <h1>hi</h1>
+    <h1>Thanks for Joining!</h1>
 </body>
 </html>
 `
@@ -313,13 +315,13 @@ export default async (req, res) => {
 
     const data = {
       to: body.email,
-      from: 'stablepay.global@gmail.com',
+      from: 'iampatelvraj@gmail.com',
       subject: 'Thanks for Joining',
       html: HTMLMARCUP
     }
     const dashboard = {
       to: 'Hello@stablepay.global',
-      from: 'stablepay.global@gmail.com',
+      from: 'iampatelvraj@gmail.com',
       subject: 'User Joined',
       text: body.email
     }
@@ -335,8 +337,6 @@ export default async (req, res) => {
   }
 }
 
-
-// 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
 
 
 
