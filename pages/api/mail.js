@@ -307,7 +307,7 @@ const HTMLMARCUP = `
 //     </body>
 //   </html>`
 
-export default async (req, res) => {
+const sendMail = async (req, res) => {
   try {
 
     const body = JSON.parse(req.body);
@@ -336,6 +336,8 @@ export default async (req, res) => {
 
   }
 }
+
+export default sendMail;
 
 
 
