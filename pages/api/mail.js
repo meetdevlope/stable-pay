@@ -3,7 +3,7 @@ import { data } from 'autoprefixer';
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 const mail = require('@sendgrid/mail');
 
-const key = process.env.NEXT_PUBLIC_MAIL_KEY
+const key = process.env.NEXT_PUBLIC_API_KEY
 
 
 mail.setApiKey(key);
