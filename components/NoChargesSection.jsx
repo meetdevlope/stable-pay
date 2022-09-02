@@ -20,7 +20,7 @@ const NoChargesSection = () => {
             We will never charge you. We’re on your team, so let’s win together.
           </h4>
           <div className="flex flex-col">
-            <h4 className="text-base mb-8">
+            <h4 className="text-lg mb-8 font-bold text-white">
               Join the Future of Global Remittance
             </h4>
             <EmailComponent buttonAppearence="pri" />
