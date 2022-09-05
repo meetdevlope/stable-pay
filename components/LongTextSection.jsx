@@ -33,7 +33,7 @@ const LongTextSection = () => {
           Facebook, Twitter, and Instagram.
         </p>
         <p>
-          Cheers, <br /> Your friends at StablePay
+          Cheers, <br /> Your friends at Stable Pay
         </p>
       </div>
     </section>

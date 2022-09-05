@@ -209,7 +209,7 @@ const Wallet = () => {
       <p>error :( </p>
     ) : (
       <div>
-        <p className="mb-2">You Send</p>
+        <p className="mb-2 text-pri">You Send</p>
         <div>
           <div className="flex mb-4">
             <input
@@ -233,7 +233,7 @@ const Wallet = () => {
               ))}
             </select>
           </div>
-          <p className="mb-2">Recepient Gets</p>
+          <p className="mb-2 text-pri">Recepient Gets &ldquo;INR&rdquo;</p>
           <p className="border border-gray px-4 py-2 rounded-md">
             {state?.final.toFixed(2)}
           </p>

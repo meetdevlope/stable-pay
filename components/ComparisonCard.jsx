@@ -3,7 +3,7 @@ import React from "react";
 const ComparisonCard = ({ companyName, amount, charges }) => {
   const cardData = [
     {
-      companyName: "StablePay",
+      companyName: "Stable Pay",
       amount: "500",
       charges: "$0 Fee",
     },
