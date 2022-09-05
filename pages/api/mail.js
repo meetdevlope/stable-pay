@@ -1,9 +1,13 @@
-import { data } from 'autoprefixer';
+// import axios from 'axios';
 
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 const mail = require('@sendgrid/mail');
+// const axios = require('axios');
 
 const key = process.env.NEXT_PUBLIC_API_KEY
+
+// const accId = "a40248d314";
+// const apiKey = "876a185376d465b00c0cd6de91b650c2-us17";
 
 
 mail.setApiKey(key);
@@ -11,298 +15,78 @@ const HTMLMARCUP =
 
 
 
-`<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html data-editor-version="2" class="sg-campaigns" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-      <!--[if !mso]><!-->
-      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-      <!--<![endif]-->
-      <!--[if (gte mso 9)|(IE)]>
-      <xml>
-        <o:OfficeDocumentSettings>
-          <o:AllowPNG/>
-          <o:PixelsPerInch>96</o:PixelsPerInch>
-        </o:OfficeDocumentSettings>
-      </xml>
-      <![endif]-->
-      <!--[if (gte mso 9)|(IE)]>
-  <style type="text/css">
-    body {width: 600px;margin: 0 auto;}
-    table {border-collapse: collapse;}
-    table, td {mso-table-lspace: 0pt;mso-table-rspace: 0pt;}
-    img {-ms-interpolation-mode: bicubic;}
-  </style>
+`<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head>
+<!--[if gte mso 15]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
 <![endif]-->
-      <style type="text/css">
-    body, p, div {
-      font-family: inherit;
-      font-size: 14px;
-    }
-    body {
-      color: #000000;
-    }
-    body a {
-      color: #1188E6;
-      text-decoration: none;
-    }
-    p { margin: 0; padding: 0; }
-    table.wrapper {
-      width:100% !important;
-      table-layout: fixed;
-      -webkit-font-smoothing: antialiased;
-      -webkit-text-size-adjust: 100%;
-      -moz-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-    }
-    img.max-width {
-      max-width: 100% !important;
-    }
-    .column.of-2 {
-      width: 50%;
-    }
-    .column.of-3 {
-      width: 33.333%;
-    }
-    .column.of-4 {
-      width: 25%;
-    }
-    ul ul ul ul  {
-      list-style-type: disc !important;
-    }
-    ol ol {
-      list-style-type: lower-roman !important;
-    }
-    ol ol ol {
-      list-style-type: lower-latin !important;
-    }
-    ol ol ol ol {
-      list-style-type: decimal !important;
-    }
-    .logo {
-        font-size: 45px;
-        font-weight: 700;
-        color: #6667ab;
-    }
-    @media screen and (max-width:480px) {
-      .preheader .rightColumnContent,
-      .footer .rightColumnContent {
-        text-align: left !important;
-      }
-      .preheader .rightColumnContent div,
-      .preheader .rightColumnContent span,
-      .footer .rightColumnContent div,
-      .footer .rightColumnContent span {
-        text-align: left !important;
-      }
-      .preheader .rightColumnContent,
-      .preheader .leftColumnContent {
-        font-size: 80% !important;
-        padding: 5px 0;
-      }
-      table.wrapper-mobile {
-        width: 100% !important;
-        table-layout: fixed;
-      }
-      img.max-width {
-        height: auto !important;
-        max-width: 100% !important;
-      }
-      a.bulletproof-button {
-        display: block !important;
-        width: auto !important;
-        font-size: 80%;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-      }
-      .columns {
-        width: 100% !important;
-      }
-      .column {
-        display: block !important;
-        width: 100% !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-      }
-      .social-icon-column {
-        display: inline-block !important;
-      }
-    }
-  </style>
-      <!--user entered Head Start--><link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet"><style>
-body {font-family: 'Muli', sans-serif;}
-</style><!--End Head user entered-->
-    </head>
-    <body>
-      <center class="wrapper" data-link-color="#1188E6" data-body-style="font-size:14px; font-family:inherit; color:#000000; background-color:#FFFFFF;">
-        <div class="webkit">
-          <table cellpadding="0" cellspacing="0" border="0" width="100%" class="wrapper" bgcolor="#FFFFFF">
-            <tr>
-              <td valign="top" bgcolor="#FFFFFF" width="100%">
-                <table width="100%" role="content-container" class="outer" align="center" cellpadding="0" cellspacing="0" border="0">
-                  <tr>
-                    <td width="100%">
-                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                          <td>
-                            <!--[if mso]>
-    <center>
-    <table><tr><td width="600">
-  <![endif]-->
-                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width:600px;" align="center">
-                                      <tr>
-                                        <td role="modules-container" style="padding:0px 0px 0px 0px; color:#000000; text-align:left;" bgcolor="#FFFFFF" width="100%" align="left"><table class="module preheader preheader-hide" role="module" data-type="preheader" border="0" cellpadding="0" cellspacing="0" width="100%" style="display: none !important; mso-hide: all; visibility: hidden; opacity: 0; color: transparent; height: 0; width: 0;">
-    <tr>
-      <td role="module-content">
-        <p></p>
-      </td>
-    </tr>
-  </table><table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" role="module" data-type="columns" style="padding:30px 20px 30px 20px;" bgcolor="#f6f6f6" data-distribution="1">
-    <tbody>
-      <tr role="module-content">
-        <td height="100%" valign="top"><table width="540" style="width:540px; border-spacing:0; border-collapse:collapse; margin:0px 10px 0px 10px;" cellpadding="0" cellspacing="0" align="left" border="0" bgcolor="" class="column column-0">
-      <tbody>
-        <tr>
-          <td style="padding:0px;margin:0px;border-spacing:0;"><table class="wrapper" role="module" data-type="image" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="72aac1ba-9036-4a77-b9d5-9a60d9b05cba">
-    <tbody>
-      <tr>
-
-        </td>
-      </tr>
-    </tbody>
-  </table><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="331cde94-eb45-45dc-8852-b7dbeb9101d7">
-    <tbody>
-      <tr>
-        <td style="padding:0px 0px 20px 0px;" role="module-content" bgcolor="">
-        </td>
-      </tr>
-    </tbody>
-  </table><table class="wrapper" role="module" data-type="image" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="d8508015-a2cb-488c-9877-d46adf313282">
-    <tbody>
-      <tr>
-        <td style="font-size:6px; line-height:10px; padding:0px 0px 0px 0px;" valign="top" align="center">
-            <h1 class="logo" >Stable Pay</h1>
-          <!-- <img class="max-width" border="0" style="display:block; color:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif; font-size:16px;" width="95" alt="" data-proportionally-constrained="true" data-responsive="false" src='https://images.pexels.com/photos/12506716/pexels-photo-12506716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' height="33"> -->
-        </td>
-      </tr>
-    </tbody>
-  </table><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="27716fe9-ee64-4a64-94f9-a4f28bc172a0">
-    <tbody>
-      <tr>
-        <td style="padding:0px 0px 30px 0px;" role="module-content" bgcolor="">
-        </td>
-      </tr>
-    </tbody>
-  </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="948e3f3f-5214-4721-a90e-625a47b1c957" data-mc-module-version="2019-10-22">
-    <tbody>
-      <tr>
-        <td style="padding:50px 30px 18px 30px; line-height:36px; color: #6667ab; text-align:inherit; background-color:#ffffff;" height="100%" valign="top" bgcolor="#ffffff" role="module-content"><div><div style="font-family: inherit; text-align: center"><span style="font-size: 43px">Thanks for joining the waitlist</span></div><div></div></div></td>
-      </tr>
-    </tbody>
-  </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a10dcb57-ad22-4f4d-b765-1d427dfddb4e" data-mc-module-version="2019-10-22">
-    <tbody>
-      <tr>
-        </span></div>
-<div style="font-family: inherit; text-align: center"><span style="color: #6667ab; font-size: 18px"><strong></strong></span></div><div></div></div></td>
-      </tr>
-    </tbody>
-  </table><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="7770fdab-634a-4f62-a277-1c66b2646d8d">
-    <tbody>
-      <tr>
-        <td style="padding:0px 0px 20px 0px;" role="module-content" bgcolor="#ffffff">
-        </td>
-      </tr>
-    </tbody>
-  </table><table border="0" cellpadding="0" cellspacing="0" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed;" width="100%" data-muid="d050540f-4672-4f31-80d9-b395dc08abe1">
-      <tbody>
-        <tr>
-          <td align="center" bgcolor="#ffffff" class="outer-td" style="padding:0px 0px 0px 0px; background-color:#ffffff;">
-            <table border="0" cellpadding="0" cellspacing="0" class="wrapper-mobile" style="text-align:center;">
-              <tbody>
-                <tr>
-                <td align="center" bgcolor="#ffbe00" class="inner-td" style="border-radius:6px; font-size:16px; text-align:center; background-color:inherit;">
-                  <a href="https://www.stablepay.global" style="background-color:#6667ab; border-radius:0px; border-width:1px; color:#fff; display:inline-block; font-size:14px; font-weight:normal; letter-spacing:0px; line-height:normal; padding:12px 40px 12px 40px; text-align:center; text-decoration:none; border-style:solid; font-family:inherit;" target="_blank">Go to our website</a>
-                </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="7770fdab-634a-4f62-a277-1c66b2646d8d.1">
-    <tbody>
-      <tr>
-        <td style="padding:0px 0px 50px 0px;" role="module-content" bgcolor="#ffffff">
-        </td>
-      </tr>
-    </tbody>
-  </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a265ebb9-ab9c-43e8-9009-54d6151b1600" data-mc-module-version="2019-10-22">
-    <tbody>
-      <tr>
-
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="c37cc5b7-79f4-4ac8-b825-9645974c984e">
-    <tbody>
-      <tr>
-        <!-- <td style="padding:0px 0px 30px 0px;" role="module-content" bgcolor="6E6E6E"> -->
-        </td>
-      </tr>
-    </tbody>
-  </table></td>
-        </tr>
-      </tbody>
-    </table></td>
-      </tr>
-    </tbody>
-  </table>
-      <tbody>
-        <tr>
-          <td align="center" bgcolor="" class="outer-td" style="padding:0px 0px 20px 0px;">
-            <table border="0" cellpadding="0" cellspacing="0" class="wrapper-mobile" style="text-align:center;">
-              <tbody>
-                <tr>
-
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table></td>
-                                      </tr>
-                                    </table>
-                                    <!--[if mso]>
-                                  </td>
-                                </tr>
-                              </table>
-                            </center>
-                            <![endif]-->
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>*|MC:SUBJECT|*</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i"/><style> img{-ms-interpolation-mode:bicubic;} table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} .mceStandardButton, .mceStandardButton td, .mceStandardButton td a{mso-hide:all !important;} p, a, li, td, blockquote{mso-line-height-rule:exactly;} p, a, li, td, body, table, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;} @media only screen and (max-width: 480px){ body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:none !important;} } .mcnPreviewText{display: none !important;} .bodyCell{margin:0 auto; padding:0; width:100%;} .ExternalClass, .ExternalClass p, .ExternalClass td, .ExternalClass div, .ExternalClass span, .ExternalClass font{line-height:100%;} .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} a[x-apple-data-detectors]{color:inherit !important; text-decoration:none !important; font-size:inherit !important; font-family:inherit !important; font-weight:inherit !important; line-height:inherit !important;} body { height: 100%; margin: 0px; padding: 0px; width: 100%; background: rgb(255, 255, 255); }p { margin: 0px; padding: 0px; }table { border-collapse: collapse; }td, p, a { word-break: break-word; }img, a img { border: 0px; height: auto; outline: none; text-decoration: none; }@media only screen and (max-width: 480px) {body { width: 100% !important; min-width: 100% !important; }colgroup { display: none; }img { height: auto !important; }.mceColumn { display: block !important; width: 100% !important; }.mceSpacing-24 { padding-right: 12px !important; padding-left: 12px !important; }.mceFooterSection .mceText, .mceFooterSection .mceText p, .mceFooterSection span { font-size: 16px !important; line-height: 150% !important; }.mceText, .mceText p { font-size: 16px !important; line-height: 150% !important; }}@media only screen and (max-width: 640px) {.mceClusterLayout td { padding: 4px !important; }} body { background-color: rgb(102, 103, 171); }.mceText, .mceLabel { font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif; }.mceText, .mceLabel { color: rgb(0, 0, 0); }.mceSpacing-24 .last-child { margin-bottom: 0px; }.mceSpacing-24 .last-child { margin-bottom: 0px; }.mceSpacing-24 .last-child { margin-bottom: 0px; }.mceSpacing-24 .last-child { margin-bottom: 0px; }.mceSpacing-24 p { margin-bottom: 24px; }.mceSpacing-24 p:last-child { margin-bottom: 0px; }.mceSpacing-24 .last-child { margin-bottom: 0px; }.mceSpacing-24 .last-child { margin-bottom: 0px; }.mceSpacing-24 .last-child { margin-bottom: 0px; }.mceSpacing-24 label { margin-bottom: 24px; }.mceSpacing-24 input { margin-bottom: 24px; }.mceSpacing-24 .last-child { margin-bottom: 0px; }.mceSpacing-24 .mceInput + .mceErrorMessage { margin-top: -12px; }.mceSpacing-12 label { margin-bottom: 12px; }.mceSpacing-12 input { margin-bottom: 12px; }.mceSpacing-12 .mceInput + .mceErrorMessage { margin-top: -6px; }.mceSpacing-48 label { margin-bottom: 48px; }.mceSpacing-48 input { margin-bottom: 48px; }.mceSpacing-48 .mceInput + .mceErrorMessage { margin-top: -24px; }.mceInput { background-color: transparent; border: 2px solid rgb(208, 208, 208); width: 60%; color: rgb(77, 77, 77); display: block; }.mceInput[type="radio"], .mceInput[type="checkbox"] { float: left; margin-right: 12px; display: inline; width: auto !important; }.mceLabel > .mceInput { margin-bottom: 0px; margin-top: 2px; }.mceLabel { display: block; } @media only screen and (max-width: 480px) {.mobileClass-6 {padding-left: 12 !important;padding-top: 0 !important;padding-right: 12 !important;}.mobileClass-6 {padding-left: 12 !important;padding-top: 0 !important;padding-right: 12 !important;}.mobileClass-6 {padding-left: 12 !important;padding-top: 0 !important;padding-right: 12 !important;}} @media only screen and (min-width: 481px) and (max-width: 768px) {}</style></head>
+<body>
+<!--*|IF:MC_PREVIEW_TEXT|*-->
+<!--[if !gte mso 9]><!----><span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">*|MC_PREVIEW_TEXT|*</span><!--<![endif]-->
+<!--*|END:IF|*-->
+<center>
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" style="background-color: rgb(102, 103, 171);">
+<tbody><tr>
+<td id="root" class="bodyCell" align="center" valign="top"><!--[if (gte mso 9)|(IE)]><table align="center" border="0" cellspacing="0" cellpadding="0" width="660" style="width:660px;"><tr><td><![endif]--><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:660px" role="presentation"><tbody><tr class="mceRow"><td style="background-position:center;background-repeat:no-repeat;background-size:cover" valign="top"><table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout:fixed" role="presentation"><colgroup><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><tbody><tr><td style="background-color:#6667ab;background-position:center;background-repeat:no-repeat;background-size:cover" class="mceColumn" valign="top" colspan="12" width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation"><tbody><tr><td style="padding-top:12px;padding-bottom:12px;padding-right:24px;padding-left:24px" class="mceSpacing-24" align="center" valign="top"><a href="https://stablepay.global" style="display:block" target="_blank"><img width="539" style="border:0;width:539px;height:auto;max-width:100%;display:block" alt="Logo" src="https://dim.mcusercontent.com/cs/50e619043678b9bcf18fa117b/images/464e73cf-b3fd-7e71-aba1-91d930363f70.png?w=539&dpr=2" class=""/></a></td></tr><tr><td style="padding-top:12px;padding-bottom:12px;padding-right:24px;padding-left:24px" class="mceSpacing-24" valign="top"><div class="mceText" style="font-size:16px;text-align:center;width:100%"><p style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;"><strong><span style="color:#f7f8f0;"><span style="font-size: 34px">Thank You!</span></span></strong></p><p style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;"><strong><span style="color:#f7f8f0;"><span style="font-size: 28px">We appreciate your lovely enthusiasm and patience as we gear up for a busy next few weeks</span></span></strong></p><p style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;"><span style="color:#f7f8f0;"><span style="font-size: medium">In the meantime, keep up with us on Facebook, Twitter, and Instagram.</span></span></p><p style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;"><strong><span style="color:#f7f8f0;"><span style="font-size: 20px">We all hate when we have to pay extra to transfer money and wait for days to receive money.</span></span></strong></p><p style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;"><span style="color:#f7f8f0;"><span style="font-size: medium">Now, ridiculous charges and long wait for transfers are about to be eliminated with </span></span><strong><span style="color:#f7f8f0;"><span style="font-size: medium">Stable Pay</span></span></strong><span style="color:#f7f8f0;"><span style="font-size: medium">, your global money transfer is changing forever.</span></span></p><p style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;"><strong><span style="color:#f7f8f0;"><span style="font-size: 20px">Interested in our priority access?</span></span></strong></p><p style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;"><span style="color:#f7f8f0;">Get early access by referring friends. The more friends that join, </span></p><p style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;" class="last-child"><span style="color:#f7f8f0;">the sooner you’ll get access</span></p></div></td></tr><tr><td class="mceSpacing-24" valign="top"><div class="mceCode"><div id="unique_id2" data-kol-snippet="contestbox" class="kol-contest-box-frame default" data-settings="{&quot;embedHeight&quot;:&quot;full&quot;,&quot;embedHeightPixels&quot;:&quot;500&quot;}">
+</div></div></td></tr><tr><td style="padding-top:12px;padding-bottom:12px;padding-right:24px;padding-left:24px" class="mceSpacing-24" align="center" valign="top"><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"><tbody><tr><td style="background-color:#f7f8f0;border-radius:0;text-align:center" class="mceButton" valign="top"><a href="https://stablepay.global" target="_blank" style="background-color:#f7f8f0;border-radius:0;border:2px solid #f7f8f0;color:#6667ab;display:inline-block;font-family:'Playfair Display', Georgia, 'Times New Roman', serif;font-size:16px;font-weight:bold;font-style:normal;padding:16px 28px;text-decoration:none;min-width:30px">Join the revolution</a></td></tr></tbody></table></td></tr><tr><td style="background-color:transparent;padding-top:20px;padding-bottom:20px;padding-right:24px;padding-left:24px" class="mceSpacing-24" valign="top"><table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:transparent" role="presentation"><tbody><tr><td style="min-width:100%;border-top:2px solid #6667ab" valign="top"></td></tr></tbody></table></td></tr><tr><td style="background-color:#6667ab;padding-top:12px;padding-bottom:12px;padding-right:0;padding-left:0" class="mceSpacing-24" valign="top"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation"><tbody><tr class="mceRow"><td style="background-color:#6667ab;background-position:center;background-repeat:no-repeat;background-size:cover;padding-top:0px;padding-bottom:0px" valign="top"><table border="0" cellpadding="0" cellspacing="24" width="100%" style="table-layout:fixed" role="presentation"><colgroup><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><tbody><tr><td style="background-position:center;background-repeat:no-repeat;background-size:cover" class="mceColumn" valign="top" colspan="12" width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation"><tbody><tr><td class="mceSpacing-24" align="center" valign="top"><table border="0" cellpadding="0" cellspacing="0" width="" role="presentation" class="mceClusterLayout"><tbody><tr><td style="padding-left:24px;padding-top:0;padding-right:24px" data-breakpoint="6" valign="top" class="mobileClass-6"><a href="https://facebook.com/" style="display:block" target="_blank"><img width="40" style="border:0;width:40px;height:auto;max-width:100%;display:block" alt="Facebook icon" src="https://dim.mcusercontent.com/https/cdn-images.mailchimp.com%2Ficons%2Fsocial-block-v3%2Fblock-icons-v3%2Ffacebook-outline-light-40.png?w=40&dpr=2" class=""/></a></td><td style="padding-left:24px;padding-top:0;padding-right:24px" data-breakpoint="6" valign="top" class="mobileClass-6"><a href="https://instagram.com/" style="display:block" target="_blank"><img width="40" style="border:0;width:40px;height:auto;max-width:100%;display:block" alt="Instagram icon" src="https://dim.mcusercontent.com/https/cdn-images.mailchimp.com%2Ficons%2Fsocial-block-v3%2Fblock-icons-v3%2Finstagram-outline-light-40.png?w=40&dpr=2" class=""/></a></td><td style="padding-left:24px;padding-top:0;padding-right:24px" data-breakpoint="6" valign="top" class="mobileClass-6"><a href="https://twitter.com/" style="display:block" target="_blank"><img width="40" style="border:0;width:40px;height:auto;max-width:100%;display:block" alt="Twitter icon" src="https://dim.mcusercontent.com/https/cdn-images.mailchimp.com%2Ficons%2Fsocial-block-v3%2Fblock-icons-v3%2Ftwitter-outline-light-40.png?w=40&dpr=2" class=""/></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td style="padding-top:8px;padding-bottom:8px;padding-right:8px;padding-left:8px" class="mceSpacing-24" valign="top"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation" id="section_6e0ec79244f3ee61fc53b48dc9aa5f1e" class="mceFooterSection"><tbody><tr class="mceRow"><td style="background-position:center;background-repeat:no-repeat;background-size:cover" valign="top"><table border="0" cellpadding="0" cellspacing="12" width="100%" style="table-layout:fixed" role="presentation"><colgroup><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><tbody><tr><td style="background-position:center;background-repeat:no-repeat;background-size:cover;padding-top:0;padding-bottom:0" class="mceColumn" valign="top" colspan="12" width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation"><tbody><tr><td style="padding-top:12px;padding-bottom:12px;padding-right:16px;padding-left:16px" class="mceSpacing-24" align="center" valign="top"><div class="mceText" style="font-size:12px;display:inline-block;width:100%"><p class="last-child"></p></div></td></tr><tr><td class="mceSpacing-24" align="center" valign="top"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation"><tbody><tr class="mceRow"><td style="background-position:center;background-repeat:no-repeat;background-size:cover" valign="top"><table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout:fixed" role="presentation"><colgroup><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/><col span="1"/></colgroup><tbody><tr><td style="background-position:center;background-repeat:no-repeat;background-size:cover" class="mceColumn" valign="top" colspan="12" width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation"><tbody><tr><td class="mceSpacing-24" align="center" valign="top"><div><div><a href="http://eepurl.com/h-ftbb" target="_blank" rel="noopener noreferrer"></a></div></div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table><!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]--></td>
+</tr>
+</tbody></table>
+</center>
+            <center>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="canspamBarWrapper" style="background-color:#FFFFFF; border-top:1px solid #E5E5E5;">
+                    <tr>
+                        <td align="center" valign="top" style="padding-top:20px; padding-bottom:20px;">
+                            <table border="0" cellpadding="0" cellspacing="0" id="canspamBar">
+                                
+                            </table>
+                        </td>
+                    </tr>
                 </table>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </center>
-    </body>
-  </html>`
+                <style type="text/css">
+                    @media only screen and (max-width: 480px){
+                        table#canspamBar td{font-size:14px !important;}
+                        table#canspamBar td a{display:block !important; margin-top:10px !important;}
+                    }
+                </style>
+            </center></body></html>
+`
 
 const sendMail = async (req, res) => {
   try {
 
     const body = JSON.parse(req.body);
     console.log(body);
+
+
+    // const reqBody = {
+    //   email_address: body.email,
+    //   // merge_fields: [],
+    //   status: 'subscribed'
+    // };
+
+
+    // const resultdata = await axios.post(`https://us17.api.mailchimp.com/3.0/lists/${accId}/members/`, reqBody,
+    //   {
+    //     headers: {
+    //       Authorization: `Basic ${apiKey}`
+    //     }
+    //   }
+    // )
 
     const data = {
       to: body.email,
