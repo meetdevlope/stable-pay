@@ -15,10 +15,10 @@ const index = () => {
   };
   return (
     <div>
-      <head>
+      <Head>
         <title>Stable Pay</title>
         <meta name='We are building a future of globla remittance' />
-      </head>
+      </Head>
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-027CTY2L8J"></Script>
       <Script id='google-analytics' >{`
         window.dataLayer = window.dataLayer || [];

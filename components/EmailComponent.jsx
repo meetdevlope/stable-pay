@@ -3,15 +3,35 @@ import ButtonComponent from "./ButtonComponent";
 import FormikForm from "./FormikForm";
 import FormInput from "./FormikForm/formInput";
 
-const EmailComponent = ({ buttonAppearence }) => {
-  const submitAction = (values) => {
-    console.log(values);
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-    fetch("/api/mail", {
-      method: "post",
-      body: JSON.stringify(values),
+const EmailComponent = ({ buttonAppearence }) => {
+  const showToastMessage = () => {
+    toast.success("Success Notification !", {
+      position: toast.POSITION.TOP_RIGHT,
     });
   };
+  const showToastErrorMessage = () => {
+    toast.error("Error Notification !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+
+  const submitAction = async (values) => {
+    console.log(values);
+
+    try {
+      await fetch("/api/mail", {
+        method: "post",
+        body: JSON.stringify(values),
+      });
+      showToastMessage();
+    } catch (error) {
+      showToastErrorMessage();
+    }
+  };
+
   return (
     <div>
       <FormikForm
@@ -30,12 +50,15 @@ const EmailComponent = ({ buttonAppearence }) => {
           },
         ]}
         action={() => (
-          <ButtonComponent
-            appearance={buttonAppearence}
-            buttonText="Get Early Access"
-            type="submit"
-            buttonClass="self-center text-sm bg-pri-dark"
-          />
+          <>
+            <ButtonComponent
+              appearance={buttonAppearence}
+              buttonText="Get Early Access"
+              type="submit"
+              buttonClass="self-center text-sm bg-pri-dark"
+            />
+            <ToastContainer />
+          </>
         )}
       />
     </div>
