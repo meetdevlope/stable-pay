@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import ButtonComponent from "./ButtonComponent";
 import FormikForm from "./FormikForm";
 import FormInput from "./FormikForm/formInput";
@@ -7,11 +7,11 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const EmailComponent = ({ buttonAppearence }) => {
-  const showToastMessage = () => {
-    toast.success("Success Notification !", {
+  const showToastMessage = useCallback(() => {
+    toast.success("Thank you for submitting!", {
       position: toast.POSITION.TOP_RIGHT,
     });
-  };
+  }, []);
   const showToastErrorMessage = () => {
     toast.error("Error Notification !", {
       position: toast.POSITION.TOP_RIGHT,

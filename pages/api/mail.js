@@ -90,13 +90,13 @@ const sendMail = async (req, res) => {
 
     const data = {
       to: body.email,
-      from: 'iampatelvraj@gmail.com',
+      from: 'Hello@stablepay.global',
       subject: 'Thanks for Joining',
       html: HTMLMARCUP
     }
     const dashboard = {
-      to: 'Hello@stablepay.global',
-      from: 'iampatelvraj@gmail.com',
+      to: 'fincrypt1@agmail.com¸',
+      from: 'Hello@stablepay.global',
       subject: 'User Joined',
       text: body.email
     }

@@ -29,7 +29,7 @@ const ComparisonCard = ({ companyName, amount, charges }) => {
         <div
           key={idx}
           className={`flex justify-between items-center p-4 text-white border rounded-xl w-full max-w-xs ${
-            data.companyName === "StablePay"
+            data.companyName === "Stable Pay"
               ? "bg-pri-dark border-pri-light scale-[1.2] shadow-2xl mx-4 md:mx-0"
               : "bg-pri border-0"
           }`}
