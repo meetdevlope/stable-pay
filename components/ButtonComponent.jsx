@@ -17,7 +17,7 @@ function ButtonComponent({
           appearance === "pri",
         "border-pri border text-pri hover:bg-pri-light hover:border-pri-light hover:text-white transition-all ":
           appearance === "pri-out",
-        "bg-white hover:bg-pri-light text-pri hover:text-white transition-all":
+        "hover:bg-pri text-white hover:text-white transition-all":
           appearance === "sec",
         "border-white border text-white hover:bg-pri-light hover:border-pri-light hover:text-pri-light transition-all ":
           appearance === "sec-out",

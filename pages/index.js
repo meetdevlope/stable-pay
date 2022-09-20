@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Script from 'next/script';
 import React from 'react'
 import ComparisonCardSection from '../components/ComparisonCardSection';
+import ContactUsSection from '../components/ContactUsSection';
 import Hero from '../components/Hero'
 import LastSection from '../components/LastSection';
 import LongTextSection from '../components/LongTextSection';
@@ -32,6 +33,7 @@ const index = () => {
       <ComparisonCardSection />
       <NoChargesSection />
       <LongTextSection />
+      <ContactUsSection />
       <LastSection />
     </div>
   )

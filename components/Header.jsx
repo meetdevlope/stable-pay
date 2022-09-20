@@ -26,6 +26,7 @@ const Header = () => {
   const navLinks = [
     { label: "Rates & Fees", link: "#comparison-section" },
     { label: "About Us", link: "#about-us" },
+    { label: "Contact Us", link: "#contact-us" },
   ];
 
   const router = useRouter();

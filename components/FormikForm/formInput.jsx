@@ -35,14 +35,9 @@ const FormInput = ({
           {...props}
           {...field}
           type={type}
-          className={cn(
-            `w-full focus:outline-none ${
-              type === "file" ? "border-none" : "border-2 border-gray "
-            }`,
-            {
-              [inputClass]: !!inputClass,
-            }
-          )}
+          className={cn(`w-full focus:outline-none`, {
+            [inputClass]: !!inputClass,
+          })}
         />
       </div>
     </div>
