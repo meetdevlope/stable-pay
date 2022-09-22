@@ -4,6 +4,7 @@ import ButtonComponent from "./ButtonComponent";
 import FormikForm from "./FormikForm";
 import FormInput from "./FormikForm/formInput";
 import FormTextarea from "./FormikForm/formTextarea";
+import Clip from "react-spinners";
 
 const ContactUsSection = () => {
   const submitAction = (values) => {
@@ -78,7 +79,7 @@ const ContactUsSection = () => {
                 {
                   name: "message",
                   inputClass:
-                    "bg-pri-light px-4 py-2 placeholder:text-gray text-white rounded-lg",
+                    "bg-pri-light px-4 py-2 placeholder:text-gray text-white rounded-lg max-h-[200px]",
                   placeholder: "Enter Your Message",
                   component: FormTextarea,
                 },
@@ -86,7 +87,7 @@ const ContactUsSection = () => {
               action={() => (
                 <ButtonComponent
                   appearance={"pri"}
-                  buttonText="Get Early Access"
+                  buttonText={"Submit"}
                   type="submit"
                   buttonClass="self-start text-sm bg-pri-dark"
                 />

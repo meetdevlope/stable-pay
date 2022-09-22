@@ -1,12 +1,16 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import ButtonComponent from "./ButtonComponent";
 import FormikForm from "./FormikForm";
 import FormInput from "./FormikForm/formInput";
+import { ClipLoader } from "react-spinners";
+import * as Yup from "yup";
 
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 const EmailComponent = ({ buttonAppearence }) => {
+  const [loading, setloading] = useState(false);
   const showToastMessage = useCallback(() => {
     toast.success("Thank you for submitting!", {
       position: toast.POSITION.TOP_RIGHT,
@@ -18,24 +22,33 @@ const EmailComponent = ({ buttonAppearence }) => {
     });
   };
 
-  const submitAction = async (values) => {
-    console.log(values);
+  const validationSchema = Yup.object({
+    email: Yup.string().email("Invalid email format").required("Required"),
+  });
 
+  const submitAction = async (values, submitProps) => {
+    console.log(values);
+    setloading(true);
+
+    submitProps.setSubmitting(false);
+    submitProps.resetForm();
     try {
-      await fetch("/api/mail", {
-        method: "post",
-        body: JSON.stringify(values),
-      });
+      const data = await axios.post("/api/mail", values);
+      // await data.json();
+      console.log(data);
       showToastMessage();
     } catch (error) {
+      console.log("error", error);
       showToastErrorMessage();
     }
+    setloading(false);
   };
 
   return (
-    <div>
+    <div className="">
       <FormikForm
-        formClass="gap-1"
+        formClass="gap-1 items-start"
+        validationSchema={validationSchema}
         initialValues={{
           email: "",
         }}
@@ -53,11 +66,16 @@ const EmailComponent = ({ buttonAppearence }) => {
           <>
             <ButtonComponent
               appearance={buttonAppearence}
-              buttonText="Get Early Access"
+              buttonText={
+                loading ? (
+                  <ClipLoader loading={true} size={"1rem"} color={"white"} />
+                ) : (
+                  "Get Early Access"
+                )
+              }
               type="submit"
-              buttonClass="self-center text-sm bg-pri-dark"
+              buttonClass="text-sm bg-pri-dark"
             />
-            <ToastContainer />
           </>
         )}
       />

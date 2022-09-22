@@ -1,7 +1,7 @@
 import React from "react";
 
-const TextError = () => {
-  return <div>TextError</div>;
+const TextError = ({ children }) => {
+  return <div className="text-white">{children}</div>;
 };
 
 export default TextError;

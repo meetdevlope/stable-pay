@@ -15,7 +15,7 @@ const NoChargesSection = () => {
           <p className="text-xl my-6 text-[#e8e8ff]">
             In short NO charges for sending money around the world, instantly!
           </p>
-          <h4 className="text-base">Never any fees</h4>
+          <h4 className="text-3xl font-bold">Never any fees</h4>
           <h4 className="max-w-sm lg:mx-0 text-base my-3">
             We will never charge you. We’re on your team, so let’s win together.
           </h4>

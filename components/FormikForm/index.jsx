@@ -10,7 +10,7 @@ const FormikForm = ({ fields, action, formClass, ...props }) => {
         return (
           <Form className={cn("flex", { [formClass]: !!formClass })}>
             {fields.map((x, id) => (
-              <>
+              <div key={id}>
                 <Field
                   onChange={(e) => {
                     handleChange(e);
@@ -20,8 +20,8 @@ const FormikForm = ({ fields, action, formClass, ...props }) => {
                   value={values}
                   {...x}
                 />
-                <ErrorMessage name={x.name} component={<TextError />} />
-              </>
+                <ErrorMessage name={x.name} component={TextError} />
+              </div>
             ))}
             {action && action()}
           </Form>

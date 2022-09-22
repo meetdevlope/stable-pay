@@ -213,7 +213,7 @@ const Wallet = () => {
         <div>
           <div className="flex mb-4">
             <input
-              className="border border-gray px-4 py-2 rounded-l-md w-full"
+              className="border text-pri border-gray px-4 py-2 rounded-l-md w-full !outline-none focus:border focus:border-pri"
               type={"number"}
               placeholder="Currency"
               value={state?.amount}
@@ -233,9 +233,30 @@ const Wallet = () => {
               ))}
             </select>
           </div>
+          <div className="flex text-pri mt-6">
+            <p>Transfer&nbsp;Fees</p>
+            <div
+              className="w-full mb-[6px]"
+              style={{ borderBottom: "2px dotted rgb(102 103 171)" }}
+            ></div>
+            <span>$0.00</span>
+          </div>
+          <div className="flex my-4 text-pri mb-6">
+            <p>Transfer&nbsp;Time</p>
+            <div
+              className="w-full mb-[6px]"
+              style={{ borderBottom: "2px dotted rgb(102 103 171)" }}
+            ></div>
+            <span>15&nbsp;mins</span>
+          </div>
           <p className="mb-2 text-pri">Recepient Gets &ldquo;INR&rdquo;</p>
-          <p className="border border-gray px-4 py-2 rounded-md">
-            {state?.final.toFixed(2)}
+          <p className=" rounded-md  flex items-stretch">
+            <span className="border text-pri rounded-l-md border-gray flex-1 px-4 py-2">
+              {state?.final.toFixed(2)}
+            </span>
+            <span className="w-[87px] bg-pri text-white flex justify-center items-center rounded-r-md">
+              INR
+            </span>
           </p>
         </div>
         {/* <img src="/images/fincrypt-visual.png" alt="charts" className="mt-10" /> */}

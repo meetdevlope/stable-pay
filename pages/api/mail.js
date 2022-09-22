@@ -69,8 +69,8 @@ const HTMLMARCUP =
 const sendMail = async (req, res) => {
   try {
 
-    const body = JSON.parse(req.body);
-    console.log(body);
+    const body = req.body;
+    console.log(body.email);
 
 
     // const reqBody = {
